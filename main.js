@@ -17,6 +17,9 @@ function main() {
 
   // load app/index.html as the window content
   mainWindow.loadFile(path.join('app', 'index.html'));
+
+  //TODO only for dev purpose. Delete after app is ready
+  mainWindow.webContents.openDevTools();
 }
 
 app.on('ready', main);
